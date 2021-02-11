@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealWorldOne.KittenGenerato
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealWorldOne.Identity.Api", "src\Identity\RealWorldOne.Identity.Api\RealWorldOne.Identity.Api.csproj", "{414F66F4-6E40-4D35-813C-A381CF5252DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealWorldOne.UserManagement.Api", "src\UserManagement\RealWorldOne.UserManagement.Api\RealWorldOne.UserManagement.Api.csproj", "{65EC3BA0-7F69-4220-AF0A-4202008183F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{414F66F4-6E40-4D35-813C-A381CF5252DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{414F66F4-6E40-4D35-813C-A381CF5252DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{414F66F4-6E40-4D35-813C-A381CF5252DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65EC3BA0-7F69-4220-AF0A-4202008183F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65EC3BA0-7F69-4220-AF0A-4202008183F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65EC3BA0-7F69-4220-AF0A-4202008183F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65EC3BA0-7F69-4220-AF0A-4202008183F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
