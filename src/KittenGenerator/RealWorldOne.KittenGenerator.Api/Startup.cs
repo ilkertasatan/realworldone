@@ -11,10 +11,12 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using RealWorldOne.KittenGenerator.Api.Extensions;
+using RealWorldOne.KittenGenerator.Api.UseCases.GetRandomKittenImage;
 
 namespace RealWorldOne.KittenGenerator.Api
 {
-    public class Startup
+    public sealed class Startup
     {
         public Startup(IConfiguration configuration)
         {
@@ -22,8 +24,7 @@ namespace RealWorldOne.KittenGenerator.Api
         }
 
         public IConfiguration Configuration { get; }
-
-        // This method gets called by the runtime. Use this method to add services to the container.
+        
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
@@ -31,9 +32,10 @@ namespace RealWorldOne.KittenGenerator.Api
             {
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "RealWorldOne.KittenGenerator.Api", Version = "v1"});
             });
-        }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            services.AddUseCases(Configuration);
+        }
+        
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -43,14 +45,14 @@ namespace RealWorldOne.KittenGenerator.Api
                 app.UseSwaggerUI(c =>
                     c.SwaggerEndpoint("/swagger/v1/swagger.json", "RealWorldOne.KittenGenerator.Api v1"));
             }
-
-            app.UseHttpsRedirection();
-
+            
             app.UseRouting();
-
             app.UseAuthorization();
 
-            app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
         }
     }
 }
