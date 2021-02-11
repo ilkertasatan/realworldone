@@ -34,6 +34,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealWorldOne.UserManagement
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealWorldOne.KittenGenerator.Application", "src\KittenGenerator\RealWorldOne.KittenGenerator.Application\RealWorldOne.KittenGenerator.Application.csproj", "{6FDF9BAE-2719-4CC3-80F5-E44C4A87A642}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealWorldOne.KittenGenerator.IntegrationTests", "test\IntegrationTests\RealWorldOne.KittenGenerator.IntegrationTests\RealWorldOne.KittenGenerator.IntegrationTests.csproj", "{E5559252-0384-4490-A449-50538A58E924}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,6 +74,10 @@ Global
 		{6FDF9BAE-2719-4CC3-80F5-E44C4A87A642}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FDF9BAE-2719-4CC3-80F5-E44C4A87A642}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FDF9BAE-2719-4CC3-80F5-E44C4A87A642}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5559252-0384-4490-A449-50538A58E924}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5559252-0384-4490-A449-50538A58E924}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5559252-0384-4490-A449-50538A58E924}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5559252-0384-4490-A449-50538A58E924}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{68BB0229-CBF9-4F0A-98CD-2D2AB8389C25} = {95BDDD82-47A0-40B5-8C63-DEED94BFCC44}
@@ -88,5 +94,6 @@ Global
 		{0CD35051-1724-4DF3-A89E-B27BECB4CB05} = {BF847B8A-6663-47D8-85E4-5EEC5AFE1164}
 		{59E53E70-6365-4528-AF69-B82804F91D37} = {BF847B8A-6663-47D8-85E4-5EEC5AFE1164}
 		{6FDF9BAE-2719-4CC3-80F5-E44C4A87A642} = {26A7C167-3B02-4B7C-8465-9ADCBD578282}
+		{E5559252-0384-4490-A449-50538A58E924} = {62E44E0C-DB16-484D-BF19-5FB2278EDF9A}
 	EndGlobalSection
 EndGlobal
