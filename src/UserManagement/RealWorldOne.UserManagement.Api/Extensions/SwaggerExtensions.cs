@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 
 namespace RealWorldOne.UserManagement.Api.Extensions
@@ -15,6 +16,14 @@ namespace RealWorldOne.UserManagement.Api.Extensions
             services.AddSwaggerGenNewtonsoftSupport();
             
             return services;
+        }
+        
+        public static IApplicationBuilder UseSwagger(this IApplicationBuilder app)
+        {
+            app.UseSwagger();
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "RealWorldOne.UserManagement.Api v1"));
+            
+            return app;
         }
     }
 }
