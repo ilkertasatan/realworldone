@@ -1,4 +1,6 @@
+using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -38,6 +40,17 @@ namespace RealWorldOne.KittenGenerator.Api
             
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapHealthChecks("/healthz/ready", new HealthCheckOptions
+                {
+                    Predicate = check => !check.Name.Contains("Liveness"),
+                    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+                });
+                endpoints.MapHealthChecks("/healthz/live", new HealthCheckOptions
+                {
+                    Predicate = check => check.Name.Contains("Liveness"),
+                    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+                });
+
                 endpoints.MapControllers();
             });
         }
