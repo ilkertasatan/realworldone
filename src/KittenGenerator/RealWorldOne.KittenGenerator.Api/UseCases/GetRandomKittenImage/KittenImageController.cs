@@ -19,6 +19,7 @@ namespace RealWorldOne.KittenGenerator.Api.UseCases.GetRandomKittenImage
         [HttpGet]
         [Authorize]
         [ProducesResponseType((int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
         [ProducesResponseType((int)HttpStatusCode.BadGateway)]
         [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         public IActionResult GetRandomKittenImage()
