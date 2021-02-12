@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using RealWorldOne.UserManagement.Api.Extensions;
 
 namespace RealWorldOne.UserManagement.Api
 {
@@ -22,8 +23,7 @@ namespace RealWorldOne.UserManagement.Api
         }
 
         public IConfiguration Configuration { get; }
-
-        // This method gets called by the runtime. Use this method to add services to the container.
+        
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
@@ -31,9 +31,10 @@ namespace RealWorldOne.UserManagement.Api
             {
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "RealWorldOne.UserManagement.Api", Version = "v1"});
             });
-        }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            services.AddInMemoryDatabase();
+        }
+        
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -45,11 +46,8 @@ namespace RealWorldOne.UserManagement.Api
             }
 
             app.UseHttpsRedirection();
-
             app.UseRouting();
-
             app.UseAuthorization();
-
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
         }
     }

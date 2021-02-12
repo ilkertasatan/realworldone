@@ -3,9 +3,9 @@ using RealWorldOne.UserManagement.Domain.Users;
 
 namespace RealWorldOne.UserManagement.Infrastructure.DataAccess
 {
-    public class DataContext : DbContext
+    public class UserManagementDataContext : DbContext
     {
-        public DataContext(DbContextOptions<DataContext> options) : base(options)
+        public UserManagementDataContext(DbContextOptions<UserManagementDataContext> options) : base(options)
         {
         }
 
@@ -13,7 +13,7 @@ namespace RealWorldOne.UserManagement.Infrastructure.DataAccess
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfigurationsFromAssembly(typeof(DataContext).Assembly);
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(UserManagementDataContext).Assembly);
         }
     }
 }
