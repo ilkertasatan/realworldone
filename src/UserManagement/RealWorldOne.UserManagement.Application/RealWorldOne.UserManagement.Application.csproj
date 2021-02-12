@@ -11,12 +11,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="UseCases\GetUser\ByEmail" />
-      <Folder Include="UseCases\GetUser\ByUserId" />
-      <Folder Include="UseCases\LogoutUser" />
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\RealWorldOne.UserManagement.Domain\RealWorldOne.UserManagement.Domain.csproj" />
       <ProjectReference Include="..\RealWorldOne.UserManagement.Infrastructure\RealWorldOne.UserManagement.Infrastructure.csproj" />
     </ItemGroup>

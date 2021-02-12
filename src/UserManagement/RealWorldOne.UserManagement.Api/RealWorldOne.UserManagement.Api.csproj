@@ -30,10 +30,4 @@
       </Content>
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="UseCases\GetUser\ByEmail" />
-      <Folder Include="UseCases\GetUser\ByUserId" />
-      <Folder Include="UseCases\LogoutUser" />
-    </ItemGroup>
-
 </Project>

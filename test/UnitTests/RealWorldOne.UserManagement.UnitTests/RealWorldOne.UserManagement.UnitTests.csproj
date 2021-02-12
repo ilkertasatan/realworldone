@@ -16,12 +16,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Folder Include="UseCases\GetUser\ByEmail" />
-        <Folder Include="UseCases\GetUser\ByUserId" />
-        <Folder Include="UseCases\LogoutUser" />
-    </ItemGroup>
-
-    <ItemGroup>
         <ProjectReference Include="..\..\..\src\UserManagement\RealWorldOne.UserManagement.Api\RealWorldOne.UserManagement.Api.csproj" />
     </ItemGroup>
 
