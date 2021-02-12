@@ -34,7 +34,7 @@ namespace RealWorldOne.UserManagement.Infrastructure.Security
             );
 
             var accessToken = new JwtSecurityTokenHandler().WriteToken(securityToken);
-            return new AccessToken(accessToken, (int)ExpiresIn.TotalSeconds);
+            return new AccessToken(accessToken, (int)ExpiresIn.TotalMilliseconds);
         }
     }
 }

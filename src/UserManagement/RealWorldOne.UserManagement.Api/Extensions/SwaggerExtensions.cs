@@ -18,7 +18,7 @@ namespace RealWorldOne.UserManagement.Api.Extensions
             return services;
         }
         
-        public static IApplicationBuilder UseSwagger(this IApplicationBuilder app)
+        public static IApplicationBuilder UseSwaggerDocumentation(this IApplicationBuilder app)
         {
             app.UseSwagger();
             app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "RealWorldOne.UserManagement.Api v1"));
