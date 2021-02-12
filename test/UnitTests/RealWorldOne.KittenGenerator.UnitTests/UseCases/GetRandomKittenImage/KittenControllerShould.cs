@@ -41,7 +41,7 @@ namespace RealWorldOne.KittenGenerator.UnitTests.UseCases.GetRandomKittenImage
         }
 
         [Fact]
-        public void Return_502_When_Proxy_Server_Not_Reachable()
+        public void Return_502_When_Error_Occured()
         {
             _kittenImageServiceMock
                 .Setup(x => x.GetRandomImage())
