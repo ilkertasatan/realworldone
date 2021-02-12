@@ -2,6 +2,8 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using RealWorldOne.KittenGenerator.Application.UseCases.GetRandomKittenImage;
+using RealWorldOne.KittenGenerator.Application.UseCases.GetRandomKittenImage.ImageDownloaders;
+using RealWorldOne.KittenGenerator.Application.UseCases.GetRandomKittenImage.ImageRotators;
 
 namespace RealWorldOne.KittenGenerator.Api.UseCases.GetRandomKittenImage
 {

@@ -1,6 +1,6 @@
 ﻿using System;
 using FluentAssertions;
-using RealWorldOne.KittenGenerator.Api.UseCases.GetRandomKittenImage;
+using RealWorldOne.KittenGenerator.Application.UseCases.GetRandomKittenImage.ImageDownloaders;
 using Xunit;
 
 namespace RealWorldOne.KittenGenerator.IntegrationTests.ImageDownloaderTests

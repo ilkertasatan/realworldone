@@ -1,8 +1,7 @@
 ﻿using System.Drawing;
 using FluentAssertions;
 using Moq;
-using RealWorldOne.KittenGenerator.Api.Extensions;
-using RealWorldOne.KittenGenerator.Api.UseCases.GetRandomKittenImage;
+using RealWorldOne.KittenGenerator.Application.Extensions;
 using RealWorldOne.KittenGenerator.Application.UseCases.GetRandomKittenImage;
 using Xunit;
 
