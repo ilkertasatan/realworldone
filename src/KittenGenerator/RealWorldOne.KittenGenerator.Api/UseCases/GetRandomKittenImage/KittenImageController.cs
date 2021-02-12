@@ -4,7 +4,7 @@ using RealWorldOne.KittenGenerator.Application.UseCases.GetRandomKittenImage;
 
 namespace RealWorldOne.KittenGenerator.Api.UseCases.GetRandomKittenImage
 {
-    [Route("api/kittens")]
+    [Route("api/kitten-images/random")]
     [ApiController]
     public class KittenImageController : ControllerBase
     {
