@@ -10,7 +10,7 @@ namespace RealWorldOne.KittenGenerator.IntegrationTests.ImageDownloaderTests
         [Fact]
         public void Download_Image()
         {
-            var sut = new KittenImageDownloader(new Uri("https://cataas.com/cat"));
+            var sut = new KittenImageDownloader(new Uri("https://cataas.com/cat?width=600&height=450"));
 
             var actualResult = sut.Download();
 
