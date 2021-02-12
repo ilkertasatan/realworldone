@@ -13,7 +13,6 @@
     <ItemGroup>
       <Folder Include="UseCases\GetUser\ByEmail" />
       <Folder Include="UseCases\GetUser\ByUserId" />
-      <Folder Include="UseCases\ListUsers" />
       <Folder Include="UseCases\LogoutUser" />
     </ItemGroup>
 

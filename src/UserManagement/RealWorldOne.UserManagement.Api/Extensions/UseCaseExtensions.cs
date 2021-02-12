@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using RealWorldOne.UserManagement.Api.UseCases.AddUser;
+using RealWorldOne.UserManagement.Api.UseCases.ListUsers;
 using RealWorldOne.UserManagement.Api.UseCases.LoginUser;
 
 namespace RealWorldOne.UserManagement.Api.Extensions
@@ -11,7 +12,8 @@ namespace RealWorldOne.UserManagement.Api.Extensions
         {
             services
                 .AddUserUseCase()
-                .AddLoginUserUseCase(configuration);
+                .AddLoginUserUseCase(configuration)
+                .AddListUsersUseCase();
             
             return services;
         }
