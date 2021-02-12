@@ -27,25 +27,20 @@ namespace RealWorldOne.KittenGenerator.Api
         
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo {Title = "RealWorldOne.KittenGenerator.Api", Version = "v1"});
-            });
-
-            services.AddUseCases(Configuration);
+            services
+                .AddApiControllers()
+                .AddSwagger()
+                .AddHealthCheck()
+                .AddJwtAuthentication(Configuration)
+                .AddUseCases(Configuration);
         }
         
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
-            {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c =>
-                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "RealWorldOne.KittenGenerator.Api v1"));
-            }
-            
+
+            app.UseSwagger();
             app.UseRouting();
             app.UseAuthorization();
 

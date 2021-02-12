@@ -1,4 +1,5 @@
 ﻿using System.Net;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using RealWorldOne.KittenGenerator.Application.UseCases.GetRandomKittenImage;
 
@@ -16,6 +17,7 @@ namespace RealWorldOne.KittenGenerator.Api.UseCases.GetRandomKittenImage
         }
 
         [HttpGet]
+        [Authorize]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.BadGateway)]
         [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
