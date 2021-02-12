@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Common" />
+      <Folder Include="UseCases\GetUser\ByEmail" />
+      <Folder Include="UseCases\GetUser\ByUserId" />
+      <Folder Include="UseCases\ListUsers" />
+      <Folder Include="UseCases\LoginUser" />
+      <Folder Include="UseCases\LogoutUser" />
+      <Folder Include="UseCases\AddUser" />
+    </ItemGroup>
+
+</Project>
