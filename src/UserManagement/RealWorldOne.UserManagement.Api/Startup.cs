@@ -27,8 +27,7 @@ namespace RealWorldOne.UserManagement.Api
                 .AddMediatR()
                 .AddInMemoryDatabase()
                 .AddFluentValidation()
-                .AddUseCases();
-
+                .AddUseCases(Configuration);
         }
         
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

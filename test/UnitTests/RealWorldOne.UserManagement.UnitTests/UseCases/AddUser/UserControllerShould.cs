@@ -38,7 +38,7 @@ namespace RealWorldOne.UserManagement.UnitTests.UseCases.AddUser
                 .Setup(x => x.Send(It.IsAny<AddUserCommand>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(new AddUserCommandResult(expectedUser));
 
-            var actualResult = await _sut.AddNewUser(
+            var actualResult = await _sut.AddNewUserAsync(
                 new AddUserRequest
                 {
                     Name = "user-name",

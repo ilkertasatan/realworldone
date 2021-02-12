@@ -2,8 +2,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealWorldOne.KittenGenerator.Api", "src\KittenGenerator\RealWorldOne.KittenGenerator.Api\RealWorldOne.KittenGenerator.Api.csproj", "{0480D88D-C0CE-44EE-A63F-B2AE475187AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealWorldOne.Identity.Api", "src\Identity\RealWorldOne.Identity.Api\RealWorldOne.Identity.Api.csproj", "{414F66F4-6E40-4D35-813C-A381CF5252DC}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealWorldOne.UserManagement.Api", "src\UserManagement\RealWorldOne.UserManagement.Api\RealWorldOne.UserManagement.Api.csproj", "{65EC3BA0-7F69-4220-AF0A-4202008183F6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealWorldOne.ApiGateway", "src\ApiGateway\RealWorldOne.ApiGateway\RealWorldOne.ApiGateway.csproj", "{68BB0229-CBF9-4F0A-98CD-2D2AB8389C25}"
@@ -11,8 +9,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservices", "Microservices", "{E1C9B315-74CA-4F33-B02F-AC17F684D62D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateway", "ApiGateway", "{95BDDD82-47A0-40B5-8C63-DEED94BFCC44}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityApi", "IdentityApi", "{D0706A15-73C4-4AD9-9A06-4D26F06B0258}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KittenGeneratorApi", "KittenGeneratorApi", "{26A7C167-3B02-4B7C-8465-9ADCBD578282}"
 EndProject
@@ -52,10 +48,6 @@ Global
 		{0480D88D-C0CE-44EE-A63F-B2AE475187AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0480D88D-C0CE-44EE-A63F-B2AE475187AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0480D88D-C0CE-44EE-A63F-B2AE475187AE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{414F66F4-6E40-4D35-813C-A381CF5252DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{414F66F4-6E40-4D35-813C-A381CF5252DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{414F66F4-6E40-4D35-813C-A381CF5252DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{414F66F4-6E40-4D35-813C-A381CF5252DC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{65EC3BA0-7F69-4220-AF0A-4202008183F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{65EC3BA0-7F69-4220-AF0A-4202008183F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65EC3BA0-7F69-4220-AF0A-4202008183F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -99,8 +91,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{68BB0229-CBF9-4F0A-98CD-2D2AB8389C25} = {95BDDD82-47A0-40B5-8C63-DEED94BFCC44}
-		{D0706A15-73C4-4AD9-9A06-4D26F06B0258} = {E1C9B315-74CA-4F33-B02F-AC17F684D62D}
-		{414F66F4-6E40-4D35-813C-A381CF5252DC} = {D0706A15-73C4-4AD9-9A06-4D26F06B0258}
 		{26A7C167-3B02-4B7C-8465-9ADCBD578282} = {E1C9B315-74CA-4F33-B02F-AC17F684D62D}
 		{0480D88D-C0CE-44EE-A63F-B2AE475187AE} = {26A7C167-3B02-4B7C-8465-9ADCBD578282}
 		{601FAEAE-3FD1-4086-A2A4-DFF4E5FCCEFB} = {E1C9B315-74CA-4F33-B02F-AC17F684D62D}

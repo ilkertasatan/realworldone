@@ -34,6 +34,13 @@ namespace RealWorldOne.UserManagement.Infrastructure.DataAccess.Repositories
                 .SingleOrDefaultAsync(user => user.Email == email, cancellationToken) ?? User.None;
         }
 
+        public async Task<User> SelectByEmailAndPasswordAsync(Email email, Password password, CancellationToken cancellationToken = default)
+        {
+            return await _dataContext.Users
+                       .SingleOrDefaultAsync(user => user.Email == email &&
+                                                     user.Password == password, cancellationToken) ?? User.None;
+        }
+
         public async Task<IEnumerable<User>> SelectAllAsync(int offset, int limit, CancellationToken cancellationToken = default)
         {
             return await _dataContext.Users.Skip(offset * limit).Take(limit).ToListAsync(cancellationToken);

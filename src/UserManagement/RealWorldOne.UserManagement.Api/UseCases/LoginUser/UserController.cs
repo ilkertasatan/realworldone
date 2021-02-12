@@ -2,11 +2,12 @@
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using RealWorldOne.UserManagement.Application.UseCases.AddUser;
+using RealWorldOne.UserManagement.Api.UseCases.AddUser;
+using RealWorldOne.UserManagement.Application.UseCases.LoginUser;
 
-namespace RealWorldOne.UserManagement.Api.UseCases.AddUser
+namespace RealWorldOne.UserManagement.Api.UseCases.LoginUser
 {
-    [Route("api/users")]
+    [Route("api/users/login")]
     [ApiController]
     public class UserController : ControllerBase
     {
@@ -18,12 +19,13 @@ namespace RealWorldOne.UserManagement.Api.UseCases.AddUser
         }
 
         [HttpPost]
-        [ProducesResponseType(typeof(AddUserResponse), StatusCodes.Status201Created)]
+        [ProducesResponseType(typeof(AddUserResponse), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> AddNewUserAsync([FromBody]AddUserRequest request)
+        public async Task<IActionResult> LoginUserAsync([FromBody]LoginUserRequest request)
         {
-            var result = await _mediator.Send(new AddUserCommand(request.Name, request.Email, request.Password));
+            var result = await _mediator.Send(new LoginUserCommand(request.Email, request.Password));
             return Output.For(result);
         }
     }
