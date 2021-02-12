@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 
-namespace RealWorldOne.KittenGenerator.Api.Extensions
+namespace RealWorldOne.KittenGenerator.Application.Extensions
 {
     public static class ImageExtensions
     {

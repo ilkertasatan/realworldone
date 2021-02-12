@@ -1,7 +1,6 @@
 ﻿using System.Drawing;
-using RealWorldOne.KittenGenerator.Application.UseCases.GetRandomKittenImage;
 
-namespace RealWorldOne.KittenGenerator.Api.UseCases.GetRandomKittenImage
+namespace RealWorldOne.KittenGenerator.Application.UseCases.GetRandomKittenImage.ImageRotators
 {
     public class KittenImageRotator : IRotateImage
     {

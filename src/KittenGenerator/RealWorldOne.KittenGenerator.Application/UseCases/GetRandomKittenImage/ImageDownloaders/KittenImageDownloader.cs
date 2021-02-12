@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Drawing;
 using System.Net;
-using RealWorldOne.KittenGenerator.Application.UseCases.GetRandomKittenImage;
 
-namespace RealWorldOne.KittenGenerator.Api.UseCases.GetRandomKittenImage
+namespace RealWorldOne.KittenGenerator.Application.UseCases.GetRandomKittenImage.ImageDownloaders
 {
     public class KittenImageDownloader : IDownloadImage
     {

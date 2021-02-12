@@ -1,8 +1,7 @@
 ﻿using System;
-using RealWorldOne.KittenGenerator.Api.Extensions;
-using RealWorldOne.KittenGenerator.Application.UseCases.GetRandomKittenImage;
+using RealWorldOne.KittenGenerator.Application.Extensions;
 
-namespace RealWorldOne.KittenGenerator.Api.UseCases.GetRandomKittenImage
+namespace RealWorldOne.KittenGenerator.Application.UseCases.GetRandomKittenImage
 {
     public class KittenImageService : IKittenImageService
     {
