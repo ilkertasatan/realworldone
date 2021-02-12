@@ -28,7 +28,7 @@ namespace RealWorldOne.UserManagement.Infrastructure.DataAccess.Repositories
                 .SingleOrDefaultAsync(user => user.Id == userId, cancellationToken) ?? User.None;
         }
 
-        public async Task<User> SelectByIdEmail(Email email, CancellationToken cancellationToken = default)
+        public async Task<User> SelectByEmailAsync(Email email, CancellationToken cancellationToken = default)
         {
             return await _dataContext.Users
                 .SingleOrDefaultAsync(user => user.Email == email, cancellationToken) ?? User.None;

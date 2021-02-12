@@ -9,7 +9,7 @@ namespace RealWorldOne.UserManagement.Domain.Users
     {
         Task<User> SaveAsync(User user, CancellationToken cancellationToken = default);
         Task<User> SelectByIdAsync(UserId userId, CancellationToken cancellationToken = default);
-        Task<User> SelectByIdEmail(Email email, CancellationToken cancellationToken = default);
+        Task<User> SelectByEmailAsync(Email email, CancellationToken cancellationToken = default);
         Task<IEnumerable<User>> SelectAllAsync(int offset, int limit, CancellationToken cancellationToken = default);
     }
 }
