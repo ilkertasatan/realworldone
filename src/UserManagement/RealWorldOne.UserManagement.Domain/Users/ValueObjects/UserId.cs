@@ -11,6 +11,11 @@ namespace RealWorldOne.UserManagement.Domain.Users.ValueObjects
 
         public Guid Value { get; }
 
+        public static UserId NewUserId()
+        {
+            return new UserId(Guid.NewGuid());
+        }
+
         public bool Equals(UserId other)
         {
             return Value.Equals(other.Value);

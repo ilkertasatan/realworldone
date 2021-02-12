@@ -5,6 +5,10 @@ namespace RealWorldOne.UserManagement.Domain.Users
 {
     public class User : Entity<UserId>
     {
+        public static readonly User None = new();
+
+        private User() { }
+
         public User(UserId userId, Name name, Email email, Password password)
         {
             Id = userId;

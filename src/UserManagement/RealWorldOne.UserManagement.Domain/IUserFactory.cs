@@ -5,6 +5,6 @@ namespace RealWorldOne.UserManagement.Domain
 {
     public interface IUserFactory
     {
-        User NewUser(UserId userId, Name name, Email email, Password password);
+        User NewUser(Name name, Email email, Password password);
     }
 }
