@@ -36,6 +36,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealWorldOne.UserManagement
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealWorldOne.UserManagement.Application", "src\UserManagement\RealWorldOne.UserManagement.Application\RealWorldOne.UserManagement.Application.csproj", "{007E3864-D098-4D53-8A11-09620AC0B963}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealWorldOne.KittenGenerator.EndToEndTests", "test\EndToEndTests\RealWorldOne.KittenGenerator.EndToEndTests\RealWorldOne.KittenGenerator.EndToEndTests.csproj", "{C0E8E3B6-5D65-41E8-941A-6D488901A62A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -82,6 +84,10 @@ Global
 		{007E3864-D098-4D53-8A11-09620AC0B963}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{007E3864-D098-4D53-8A11-09620AC0B963}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{007E3864-D098-4D53-8A11-09620AC0B963}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0E8E3B6-5D65-41E8-941A-6D488901A62A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0E8E3B6-5D65-41E8-941A-6D488901A62A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0E8E3B6-5D65-41E8-941A-6D488901A62A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0E8E3B6-5D65-41E8-941A-6D488901A62A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{68BB0229-CBF9-4F0A-98CD-2D2AB8389C25} = {95BDDD82-47A0-40B5-8C63-DEED94BFCC44}
@@ -99,5 +105,6 @@ Global
 		{73AD7575-1D2E-45B8-8E53-6A791510D18E} = {601FAEAE-3FD1-4086-A2A4-DFF4E5FCCEFB}
 		{227AF5B1-0D20-4074-B7AB-F2686752179D} = {601FAEAE-3FD1-4086-A2A4-DFF4E5FCCEFB}
 		{007E3864-D098-4D53-8A11-09620AC0B963} = {601FAEAE-3FD1-4086-A2A4-DFF4E5FCCEFB}
+		{C0E8E3B6-5D65-41E8-941A-6D488901A62A} = {C177C658-2DA5-471B-BC78-4E8020413881}
 	EndGlobalSection
 EndGlobal
