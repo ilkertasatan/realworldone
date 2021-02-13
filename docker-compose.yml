@@ -4,8 +4,6 @@ services:
   kitten-generator-api:
     container_name: kitten-generator-api
     image: kitten-generator-api
-    networks:
-      - realworldone
     ports:
       - "5000:5000"
     environment:
@@ -15,18 +13,8 @@ services:
   user-management-api:
     container_name: user-management-api
     image: user-management-api
-    networks:
-      - realworldone
     ports:
-      - "5001:50001"
+      - "5001:5001"
     environment:
       ASPNETCORE_ENVIRONMENT: Production
-      ASPNETCORE_URLS: https://*:5001
-      
-volumes:
-  data:
-    driver: local
-
-networks:
-  realworldone:
-    driver: bridge
+      ASPNETCORE_URLS: http://*:5001

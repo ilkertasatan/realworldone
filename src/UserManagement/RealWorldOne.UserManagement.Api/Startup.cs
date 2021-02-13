@@ -36,7 +36,6 @@ namespace RealWorldOne.UserManagement.Api
                 app.UseDeveloperExceptionPage();
 
             app.UseSwaggerDocumentation();
-            app.UseHttpsRedirection();
             app.UseRouting();
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>

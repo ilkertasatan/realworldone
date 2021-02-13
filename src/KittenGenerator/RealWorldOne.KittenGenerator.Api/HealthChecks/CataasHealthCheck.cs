@@ -21,7 +21,7 @@ namespace RealWorldOne.KittenGenerator.Api.HealthChecks
         {
             try
             {
-                _imageDownloader.Download();
+                await Task.FromResult(_imageDownloader.Download());
             }
             catch (Exception ex)
             {
