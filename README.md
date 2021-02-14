@@ -48,9 +48,11 @@ Use this link: http://localhost:5001/swagger/index.html to reach Swagger documen
 All project was dockerized. You need to run `build-all.ps1` PowerShell script in the root directory of the project.
 
 After open any terminal, go to the project directory and type in the command below.
+
 `./build-all.ps1`
 
 In case you might get a security error when running the PowerShell script, you should run the following;
+
 `Set-ExecutionPolicy RemoteSigned`
 
 Afterward, you should see the project started to be built.
