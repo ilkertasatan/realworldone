@@ -1,4 +1,4 @@
-﻿namespace RealWorldOne.UserManagement.Infrastructure.Security
+﻿namespace RealWorldOne.UserManagement.Application.Common.Security
 {
     public sealed class AccessToken
     {
