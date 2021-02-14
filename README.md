@@ -1,13 +1,16 @@
 ﻿# realworld one Backend Developer Test
 This is a technical test that I developed for realworld one. All information that you need and instructions on how you can test have been introduced the following.
 
-# What I Used For Developing
+# Technologies
+Aside from .NET Core, numerous technologies I used within this solution including:
 
 - NET 5 and Clean Architecture
-- EF Core with inmemory db support
-- MediatR
-- XUnit
-- XBehave, Moq and FluentAssertions
+- Web API using ASP.NET Core
+- Data access with EF Core
+- CQRS with MediatR
+- Security using JWT Token
+- Validation with FluentValidation
+- Testing with XUnit, XBehave, Moq and FluentAssertions
 
 ## Infrastructure
 I focused on building microservice architecture so you will see two separate projects in the solution like in the real life scenario. This architecture can also be extended by adding an API Gateway and monitoring.
