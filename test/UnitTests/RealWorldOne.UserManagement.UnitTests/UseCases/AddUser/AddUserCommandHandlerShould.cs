@@ -11,6 +11,7 @@ using RealWorldOne.UserManagement.Application.UseCases.AddUser;
 using RealWorldOne.UserManagement.Domain.Users;
 using RealWorldOne.UserManagement.Domain.Users.ValueObjects;
 using RealWorldOne.UserManagement.Infrastructure.DataAccess;
+using RealWorldOne.UserManagement.Infrastructure.Security;
 using Xunit;
 using ValidationException = RealWorldOne.UserManagement.Application.Common.Exceptions.ValidationException;
 
@@ -31,7 +32,7 @@ namespace RealWorldOne.UserManagement.UnitTests.UseCases.AddUser
         public async Task Add_New_User_When_User_DoesNot_Exist()
         {
             var expectedUser =
-                new EntityFactory().NewUser(new Name("user-name"), new Email("email"), new Password("pass"));
+                new EntityFactory().NewUser(new Name("user-name"), new Email("email"), new Password("pass"), new PasswordSalt("salt"));
             _userRepositoryMock
                 .Setup(x => x.SaveAsync(It.IsAny<User>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(expectedUser);
@@ -53,7 +54,7 @@ namespace RealWorldOne.UserManagement.UnitTests.UseCases.AddUser
         public async Task Ensure_Idempotency_Given_Registered_User()
         {
             var expectedUser =
-                new EntityFactory().NewUser(new Name("user-name"), new Email("email"), new Password("pass"));
+                new EntityFactory().NewUser(new Name("user-name"), new Email("email"), new Password("pass"), new PasswordSalt("salt"));
             _userRepositoryMock
                 .Setup(x => x.SelectByEmailAsync(expectedUser.Email, It.IsAny<CancellationToken>()))
                 .ReturnsAsync(expectedUser);

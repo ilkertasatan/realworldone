@@ -6,9 +6,9 @@ namespace RealWorldOne.UserManagement.Infrastructure.DataAccess
 {
     public sealed class EntityFactory : IUserFactory
     {
-        public User NewUser(Name name, Email email, Password password)
+        public User NewUser(Name name, Email email, Password password, PasswordSalt passwordSalt)
         {
-            return new(UserId.NewUserId(), name, email, password);
+            return new(UserId.NewUserId(), name, email, password, passwordSalt);
         }
     }
 }

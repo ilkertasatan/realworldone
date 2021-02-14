@@ -27,7 +27,7 @@ namespace RealWorldOne.UserManagement.UnitTests.UseCases.AddUser
         public async Task Return_201_When_User_Registered()
         {
             var expectedUser =
-                new EntityFactory().NewUser(new Name("user-name"), new Email("email"), new Password("pass"));
+                new EntityFactory().NewUser(new Name("user-name"), new Email("email"), new Password("pass"), new PasswordSalt("salt"));
             var expectedResponse = new AddUserResponse
             {
                 UserId = expectedUser.Id.Value,

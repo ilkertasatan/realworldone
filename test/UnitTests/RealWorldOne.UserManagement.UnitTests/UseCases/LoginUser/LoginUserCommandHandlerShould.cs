@@ -46,11 +46,15 @@ namespace RealWorldOne.UserManagement.UnitTests.UseCases.LoginUser
         {
             var expectedResult = new AccessToken("access-token", 100);
             _userRepositoryMock
-                .Setup(x => x.SelectByEmailAndPasswordAsync(
+                .Setup(x => x.SelectByEmailAsync(
                     It.IsAny<Email>(),
-                    It.IsAny<Password>(),
                     It.IsAny<CancellationToken>()))
-                .ReturnsAsync(new User(UserId.NewUserId(), new Name("name"),new Email("user@email.com"),new Password("password")));
+                .ReturnsAsync(new User(
+                    UserId.NewUserId(),
+                    new Name("name"),
+                    new Email("user@email.com"),
+                    new Password("cmKaQbB25Yj7qMcco3+tyazcjnMhuctOpV/Qv5/o7XI="),
+                    new PasswordSalt("salt")));
             _tokenGeneratorMock
                 .Setup(x => x.CreateAccessToken(
                     It.IsAny<string>(),
@@ -71,15 +75,41 @@ namespace RealWorldOne.UserManagement.UnitTests.UseCases.LoginUser
         public async Task Return_User_Not_Found_When_User_DoesNot_Exist()
         {
             _userRepositoryMock
-                .Setup(x => x.SelectByEmailAndPasswordAsync(
+                .Setup(x => x.SelectByEmailAsync(
                     It.IsAny<Email>(),
-                    It.IsAny<Password>(),
                     It.IsAny<CancellationToken>()))
                 .ReturnsAsync(User.None);
             
             var actualResult = await _sut.Handle(new LoginUserCommand("user@email.com", "password"), CancellationToken.None);
 
             actualResult.Should().BeOfType<UserNotFoundResult>();
+        }
+        
+        [Fact]
+        public async Task Return_Password_InCorrect_When_Password_Does_Not_Match()
+        {
+            var expectedResult = new AccessToken("access-token", 100);
+            _userRepositoryMock
+                .Setup(x => x.SelectByEmailAsync(
+                    It.IsAny<Email>(),
+                    It.IsAny<CancellationToken>()))
+                .ReturnsAsync(new User(
+                    UserId.NewUserId(),
+                    new Name("name"),
+                    new Email("user@email.com"),
+                    new Password("cmKaQbB25Yj7qMcco3+tyazcjnMhuctOpV/Qv5/o7XI="),
+                    new PasswordSalt("salt")));
+            _tokenGeneratorMock
+                .Setup(x => x.CreateAccessToken(
+                    It.IsAny<string>(),
+                    It.IsAny<string>(),
+                    It.IsAny<string>(),
+                    It.IsAny<string>()))
+                .Returns(expectedResult);
+            
+            var actualResult = await _sut.Handle(new LoginUserCommand("user@email.com", "incorrect-password"), CancellationToken.None);
+
+            actualResult.Should().BeOfType<PasswordInCorrectResult>();
         }
         
         [Theory]

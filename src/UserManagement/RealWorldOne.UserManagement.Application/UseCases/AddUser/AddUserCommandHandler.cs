@@ -2,8 +2,11 @@
 using System.Threading.Tasks;
 using MediatR;
 using RealWorldOne.UserManagement.Application.Common.Interfaces;
+using RealWorldOne.UserManagement.Application.Extensions;
 using RealWorldOne.UserManagement.Domain;
 using RealWorldOne.UserManagement.Domain.Users;
+using RealWorldOne.UserManagement.Domain.Users.ValueObjects;
+using RealWorldOne.UserManagement.Infrastructure.Security;
 
 namespace RealWorldOne.UserManagement.Application.UseCases.AddUser
 {
@@ -12,7 +15,9 @@ namespace RealWorldOne.UserManagement.Application.UseCases.AddUser
         private readonly IUserRepository _userRepository;
         private readonly IUserFactory _userFactory;
 
-        public AddUserCommandHandler(IUserRepository userRepository, IUserFactory userFactory)
+        public AddUserCommandHandler(
+            IUserRepository userRepository,
+            IUserFactory userFactory)
         {
             _userRepository = userRepository;
             _userFactory = userFactory;
@@ -24,7 +29,9 @@ namespace RealWorldOne.UserManagement.Application.UseCases.AddUser
             if (registeredUser.Exists())
                 return new AddUserCommandResult(registeredUser);
 
-            var userEntity = _userFactory.NewUser(request.Name, request.Email, request.Password);
+            var salt = Salt.Create();
+            var hash = Hash.Create(request.Password.Value, salt);
+            var userEntity = _userFactory.NewUser(request.Name, request.Email, new Password(hash), new PasswordSalt(salt));
             var user = await _userRepository.SaveAsync(userEntity, cancellationToken);
 
             await _userRepository.CommitChangesAsync(cancellationToken);

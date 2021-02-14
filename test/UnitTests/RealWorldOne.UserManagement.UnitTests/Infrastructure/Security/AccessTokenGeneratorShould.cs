@@ -9,7 +9,7 @@ namespace RealWorldOne.UserManagement.UnitTests.Infrastructure.Security
         [Fact]
         public void Generate_Token()
         {
-            const int expectedExpiresIn = 300;
+            const int expectedExpiresIn = 300000;
             var sut = new AccessTokenGenerator();
 
             var actualResult = sut.CreateAccessToken("aGVsbG9mcmVzaGdvX2JlX3Rlc3Q=", "sub", "iss", "aud");

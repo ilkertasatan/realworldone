@@ -7,6 +7,7 @@ using Moq;
 using RealWorldOne.UserManagement.Application.UseCases.ListUsers;
 using RealWorldOne.UserManagement.Domain.Users;
 using RealWorldOne.UserManagement.Domain.Users.ValueObjects;
+using RealWorldOne.UserManagement.Infrastructure.Security;
 using Xunit;
 
 namespace RealWorldOne.UserManagement.UnitTests.UseCases.ListUsers
@@ -51,7 +52,8 @@ namespace RealWorldOne.UserManagement.UnitTests.UseCases.ListUsers
                 new UserId(userId),
                 new Name(name),
                 new Email(email),
-                new Password(password));
+                new Password(password),
+                new PasswordSalt(Salt.Create()));
         }
     }
 }

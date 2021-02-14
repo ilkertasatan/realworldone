@@ -5,6 +5,7 @@ using FluentAssertions;
 using RealWorldOne.UserManagement.Domain.Users;
 using RealWorldOne.UserManagement.Domain.Users.ValueObjects;
 using RealWorldOne.UserManagement.Infrastructure.DataAccess.Repositories;
+using RealWorldOne.UserManagement.Infrastructure.Security;
 using Xunit;
 
 namespace RealWorldOne.KittenGenerator.IntegrationTests.InfrastructureTests.DataAccess.Repositories
@@ -31,7 +32,8 @@ namespace RealWorldOne.KittenGenerator.IntegrationTests.InfrastructureTests.Data
                 UserId.NewUserId(),
                 new Name("name"),
                 new Email("user@email.com"),
-                new Password("pass"));
+                new Password("pass"),
+                new PasswordSalt(Salt.Create()));
             var sut = new UserRepository(_fixture.UserManagementDataContext);
 
             await sut.SaveAsync(expectedUser, _cancellationToken);

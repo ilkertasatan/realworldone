@@ -12,6 +12,7 @@ namespace RealWorldOne.UserManagement.Api.UseCases.LoginUser
             {
                 LoginUserCommandResult result => Ok(result),
                 UserNotFoundResult result => NotFound(result),
+                PasswordInCorrectResult => Unauthorized(),
                 _ => InternalServerError()
             };
 
@@ -27,6 +28,11 @@ namespace RealWorldOne.UserManagement.Api.UseCases.LoginUser
         private static NotFoundObjectResult NotFound(UserNotFoundResult notFound)
         {
             return new(notFound.Message);
+        }
+
+        private static UnauthorizedObjectResult Unauthorized()
+        {
+            return new("Password is incorrect");
         }
 
         private static StatusCodeResult InternalServerError()
