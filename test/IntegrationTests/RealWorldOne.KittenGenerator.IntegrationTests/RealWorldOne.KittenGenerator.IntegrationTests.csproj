@@ -17,6 +17,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\..\src\KittenGenerator\RealWorldOne.KittenGenerator.Api\RealWorldOne.KittenGenerator.Api.csproj" />
+      <ProjectReference Include="..\..\..\src\UserManagement\RealWorldOne.UserManagement.Application\RealWorldOne.UserManagement.Application.csproj" />
       <ProjectReference Include="..\..\..\src\UserManagement\RealWorldOne.UserManagement.Infrastructure\RealWorldOne.UserManagement.Infrastructure.csproj" />
     </ItemGroup>
     

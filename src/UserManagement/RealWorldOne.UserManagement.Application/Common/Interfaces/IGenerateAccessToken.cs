@@ -1,4 +1,6 @@
-﻿namespace RealWorldOne.UserManagement.Infrastructure.Security
+﻿using RealWorldOne.UserManagement.Application.Common.Security;
+
+namespace RealWorldOne.UserManagement.Application.Common.Interfaces
 {
     public interface IGenerateAccessToken
     {

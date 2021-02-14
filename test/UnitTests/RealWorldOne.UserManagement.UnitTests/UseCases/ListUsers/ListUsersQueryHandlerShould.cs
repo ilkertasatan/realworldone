@@ -4,10 +4,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using FluentAssertions;
 using Moq;
+using RealWorldOne.UserManagement.Application.Common.Security;
 using RealWorldOne.UserManagement.Application.UseCases.ListUsers;
 using RealWorldOne.UserManagement.Domain.Users;
 using RealWorldOne.UserManagement.Domain.Users.ValueObjects;
-using RealWorldOne.UserManagement.Infrastructure.Security;
 using Xunit;
 
 namespace RealWorldOne.UserManagement.UnitTests.UseCases.ListUsers

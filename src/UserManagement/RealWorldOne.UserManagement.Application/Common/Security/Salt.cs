@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Security.Cryptography;
 
-namespace RealWorldOne.UserManagement.Infrastructure.Security
+namespace RealWorldOne.UserManagement.Application.Common.Security
 {
     public static class Salt
     {

@@ -11,7 +11,6 @@ using RealWorldOne.UserManagement.Application.UseCases.AddUser;
 using RealWorldOne.UserManagement.Domain.Users;
 using RealWorldOne.UserManagement.Domain.Users.ValueObjects;
 using RealWorldOne.UserManagement.Infrastructure.DataAccess;
-using RealWorldOne.UserManagement.Infrastructure.Security;
 using Xunit;
 using ValidationException = RealWorldOne.UserManagement.Application.Common.Exceptions.ValidationException;
 

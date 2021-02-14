@@ -55,5 +55,5 @@ In case you might get a security error when running the PowerShell script, you s
 
 Afterward, you should see the project started to be built.
 
-## Final Notes
+## Conclusion
 I would like to thank you for giving me this chance to show what I can do. I hope that you will like my solution when you review it.

@@ -8,10 +8,11 @@ using MediatR;
 using Microsoft.Extensions.Options;
 using Moq;
 using RealWorldOne.UserManagement.Application.Common.Behaviours;
+using RealWorldOne.UserManagement.Application.Common.Interfaces;
+using RealWorldOne.UserManagement.Application.Common.Security;
 using RealWorldOne.UserManagement.Application.UseCases.LoginUser;
 using RealWorldOne.UserManagement.Domain.Users;
 using RealWorldOne.UserManagement.Domain.Users.ValueObjects;
-using RealWorldOne.UserManagement.Infrastructure.Security;
 using Xunit;
 using ValidationException = RealWorldOne.UserManagement.Application.Common.Exceptions.ValidationException;
 

@@ -1,9 +1,10 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using RealWorldOne.UserManagement.Application.Common.Interfaces;
+using RealWorldOne.UserManagement.Application.Common.Security;
 using RealWorldOne.UserManagement.Domain.Users;
 using RealWorldOne.UserManagement.Infrastructure.DataAccess.Repositories;
-using RealWorldOne.UserManagement.Infrastructure.Security;
 
 namespace RealWorldOne.UserManagement.Api.UseCases.LoginUser
 {

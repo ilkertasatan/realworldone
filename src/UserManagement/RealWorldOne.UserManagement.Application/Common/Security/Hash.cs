@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using System.Text;
 using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 
-namespace RealWorldOne.UserManagement.Infrastructure.Security
+namespace RealWorldOne.UserManagement.Application.Common.Security
 {
     public static class Hash
     {

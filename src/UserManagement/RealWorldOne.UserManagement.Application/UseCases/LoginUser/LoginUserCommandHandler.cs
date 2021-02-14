@@ -3,9 +3,9 @@ using System.Threading.Tasks;
 using MediatR;
 using Microsoft.Extensions.Options;
 using RealWorldOne.UserManagement.Application.Common.Interfaces;
+using RealWorldOne.UserManagement.Application.Common.Security;
 using RealWorldOne.UserManagement.Application.Extensions;
 using RealWorldOne.UserManagement.Domain.Users;
-using RealWorldOne.UserManagement.Infrastructure.Security;
 
 namespace RealWorldOne.UserManagement.Application.UseCases.LoginUser
 {

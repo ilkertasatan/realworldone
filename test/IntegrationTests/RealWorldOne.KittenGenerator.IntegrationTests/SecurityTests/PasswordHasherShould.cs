@@ -1,5 +1,5 @@
 ﻿using FluentAssertions;
-using RealWorldOne.UserManagement.Infrastructure.Security;
+using RealWorldOne.UserManagement.Application.Common.Security;
 using Xunit;
 
 namespace RealWorldOne.KittenGenerator.IntegrationTests.SecurityTests

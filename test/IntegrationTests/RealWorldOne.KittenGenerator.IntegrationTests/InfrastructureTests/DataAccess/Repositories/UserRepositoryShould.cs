@@ -2,10 +2,10 @@
 using System.Threading;
 using System.Threading.Tasks;
 using FluentAssertions;
+using RealWorldOne.UserManagement.Application.Common.Security;
 using RealWorldOne.UserManagement.Domain.Users;
 using RealWorldOne.UserManagement.Domain.Users.ValueObjects;
 using RealWorldOne.UserManagement.Infrastructure.DataAccess.Repositories;
-using RealWorldOne.UserManagement.Infrastructure.Security;
 using Xunit;
 
 namespace RealWorldOne.KittenGenerator.IntegrationTests.InfrastructureTests.DataAccess.Repositories

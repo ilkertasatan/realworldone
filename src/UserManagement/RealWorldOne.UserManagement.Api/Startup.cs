@@ -38,6 +38,8 @@ namespace RealWorldOne.UserManagement.Api
             app.UseSwaggerDocumentation();
             app.UseRouting();
             app.UseAuthorization();
+            app.UseRequestResponseLogging();
+            app.ConfigureExceptionHandler();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapHealthChecks("/healthz/ready", new HealthCheckOptions

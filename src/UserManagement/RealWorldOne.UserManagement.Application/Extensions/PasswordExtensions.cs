@@ -1,5 +1,5 @@
-﻿using RealWorldOne.UserManagement.Domain.Users.ValueObjects;
-using RealWorldOne.UserManagement.Infrastructure.Security;
+﻿using RealWorldOne.UserManagement.Application.Common.Security;
+using RealWorldOne.UserManagement.Domain.Users.ValueObjects;
 
 namespace RealWorldOne.UserManagement.Application.Extensions
 {

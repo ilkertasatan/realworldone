@@ -4,8 +4,9 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
+using RealWorldOne.UserManagement.Application.Common.Interfaces;
 
-namespace RealWorldOne.UserManagement.Infrastructure.Security
+namespace RealWorldOne.UserManagement.Application.Common.Security
 {
     public class AccessTokenGenerator : IGenerateAccessToken
     {

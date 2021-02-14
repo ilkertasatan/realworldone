@@ -7,10 +7,10 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 using RealWorldOne.UserManagement.Api.UseCases.ListUsers;
+using RealWorldOne.UserManagement.Application.Common.Security;
 using RealWorldOne.UserManagement.Application.UseCases.ListUsers;
 using RealWorldOne.UserManagement.Domain.Users;
 using RealWorldOne.UserManagement.Domain.Users.ValueObjects;
-using RealWorldOne.UserManagement.Infrastructure.Security;
 using Xunit;
 
 namespace RealWorldOne.UserManagement.UnitTests.UseCases.ListUsers
