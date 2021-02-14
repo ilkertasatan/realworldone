@@ -7,9 +7,9 @@ $BSTR = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($SecuredPas
 $Password = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto($BSTR)
 
 $Body = @{
-    "user_name" = $Name
-    "user_email" = $Email
-    "user_password" = $Password
+    "name" = $Name
+    "email" = $Email
+    "password" = $Password
 }
 
 $Parameters = @{
