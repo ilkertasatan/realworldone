@@ -23,7 +23,7 @@ namespace RealWorldOne.KittenGenerator.EndToEndTests
         }
         
         [Scenario]
-        public void Register_New_User(LoginUserResponse loginResponse)
+        public void Login_User(LoginUserResponse loginResponse)
         {
             "Given I have an user".x(async () => await GivenUserAsync());
             "When user logged in".x(async () => loginResponse = await LoginUserAsync());
